@@ -1,0 +1,11 @@
+@import 'angular-material';
+@import 'github-markdown-css';
+
+body {
+  padding: 0 100px;
+  min-width: 900px;
+}
+
+#output {
+  font-family: monospace;
+}
