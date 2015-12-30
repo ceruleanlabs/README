@@ -21,48 +21,53 @@ title: README
 
 <hr />
 
-<div ng-controller="DemoCtrl" layout="column" ng-cloak>
-  <md-content layout="row" layout-padding>
-    <md-input-container style="width: 50%">
-      <label>Project Name</label>
-      <input ng-model="doc.title">
-    </md-input-container>
-    </md-content>
-    <md-content layout="row" layout-padding>
-    <md-input-container style="width: 70%">
-      <label>Short Description</label>
-      <input ng-model="doc.desc">
-    </md-input-container>
-    </md-content>
-    <md-content layout="row" layout-padding>
-    <md-input-container style="width: 50%">
-      <label>Purpose Header</label>
-      <input ng-model="doc.purposeHeader">
-    </md-input-container>
-    </md-content>
-    <md-content layout="row" layout-padding>
-    <md-input-container style="width: 70%">
-      <label>Purpose Description</label>
-      <textarea ng-model="doc.purposeDesc" ng-model-options="{ getterSetter: true }"></textarea>
-    </md-input-container>
-  </md-content>
-
-  <div layout="row">
-    <div id="output" style="width: 50%">
-      # <span ng-bind="doc.title"></span>
-      <br /><br />
-      <span ng-bind="doc.desc"></span>
-      <br /><br />
-      ## <span ng-bind="doc.purposeHeader"></span>
-      <br /><br />
-      <span ng-bind-html="doc.purposeDescHTML()"></span>
+<div ng-controller="DemoCtrl" layout="row" layout-align="space-around" ng-cloak>
+  <div layout="column" flex="50">
+    <div layout="row" layout-padding>
+      <md-input-container flex="100">
+        <label>Project Name</label>
+        <input ng-model="doc.title">
+      </md-input-container>
     </div>
-
-    <div id="preview" class="markdown-body" style="width: 50%">
-      <h1 ng-bind="doc.title"></h1>
-      <p ng-bind="doc.desc"></p>
-      <h2 ng-bind="doc.purposeHeader"></h2>
-      <p ng-bind-html="doc.purposeDescHTML()"></p>
+    <div layout="row" layout-padding>
+      <md-input-container flex="100">
+        <label>Short Description</label>
+        <input ng-model="doc.desc">
+      </md-input-container>
+    </div>
+    <div layout="row" layout-padding>
+      <md-input-container flex="100">
+        <label>Purpose Header</label>
+        <input ng-model="doc.purposeHeader">
+      </md-input-container>
+    </div>
+    <div layout="row" layout-padding>
+      <md-input-container flex="100">
+        <label>Purpose Description</label>
+        <textarea ng-model="doc.purposeDesc" ng-model-options="{ getterSetter: true }"></textarea>
+      </md-input-container>
     </div>
   </div>
+
+  <md-tabs layout="column" flex="50">
+    <md-tab label="Preview">
+      <div id="preview" class="markdown-body md-padding">
+        <h1 ng-bind="doc.title"></h1>
+        <p ng-bind="doc.desc"></p>
+        <h2 ng-bind="doc.purposeHeader"></h2>
+        <p ng-bind-html="doc.purposeDescHTML()"></p>
+      </div>
+    </md-tab>
+    <md-tab label="Markdown">
+      <div id="output" class="md-padding" style="width: 50%">
+        # <span ng-bind="doc.title"></span>
+        <br /><br />
+        <span ng-bind="doc.desc"></span>
+        <br /><br />
+        ## <span ng-bind="doc.purposeHeader"></span>
+        <br /><br />
+        <span ng-bind-html="doc.purposeDescHTML()"></span>
+      </div>
+    </md-tab>
+  </md-tabs>
 </div>
