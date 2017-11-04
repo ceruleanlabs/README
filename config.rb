@@ -53,7 +53,6 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
-activate :sprockets
 sprockets.append_path File.join root, "bower_components"
 
 # Build-specific configuration
