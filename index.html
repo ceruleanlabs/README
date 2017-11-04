@@ -1,0 +1,88 @@
+<!doctype html>
+<html ng-app="ReadmeApp">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>README</title>
+
+    <link href="stylesheets/all-58b0ba0e.css" rel="stylesheet" />
+    <script src="javascripts/all-5d820be9.js"></script>
+  </head>
+
+  <body class="index">
+    <h1 class="md-display-3">README</h1>
+
+<div layout="row">
+  <p class="md-body-1">
+    <strong>README</strong> is a <em>common documentation generator</em>.
+    Its purpose is to quickly generate documentation for a project so you can jump
+    right into development knowing the core of your project is already documented
+    for you.
+  </p>
+</div>
+
+<div layout="row">
+  <p class="md-body-1">
+    It primarily supports <em>quick, simple projects</em> for epically bootstrapped documentation.
+  </p>
+</div>
+
+<hr />
+
+<div ng-controller="DemoCtrl" layout="row" layout-align="space-around" ng-cloak>
+  <div layout="column" flex="50">
+    <div layout="row" layout-padding>
+      <md-input-container flex="100">
+        <label>Project Name</label>
+        <input ng-model="doc.title">
+      </md-input-container>
+    </div>
+    <div layout="row" layout-padding>
+      <md-input-container flex="100">
+        <label>Short Description</label>
+        <input ng-model="doc.desc">
+      </md-input-container>
+    </div>
+    <div layout="row" layout-padding>
+      <md-input-container flex="100">
+        <label>Purpose Header</label>
+        <input ng-model="doc.purposeHeader">
+      </md-input-container>
+    </div>
+    <div layout="row" layout-padding>
+      <md-input-container flex="100">
+        <label>Purpose Description</label>
+        <textarea ng-model="doc.purposeDesc" ng-model-options="{ getterSetter: true }"></textarea>
+      </md-input-container>
+    </div>
+  </div>
+
+  <md-tabs layout="column" flex="50">
+    <md-tab label="Preview">
+      <div id="preview" class="markdown-body md-padding">
+        <h1 ng-bind="doc.title"></h1>
+        <p ng-bind="doc.desc"></p>
+        <h2 ng-bind="doc.purposeHeader"></h2>
+        <p ng-bind-html="doc.purposeDescHTML()"></p>
+      </div>
+    </md-tab>
+    <md-tab label="Markdown">
+      <div id="output" class="md-padding" style="width: 50%">
+        # <span ng-bind="doc.title"></span>
+        <br /><br />
+        <span ng-bind="doc.desc"></span>
+        <br /><br />
+        ## <span ng-bind="doc.purposeHeader"></span>
+        <br /><br />
+        <span ng-bind-html="doc.purposeDescHTML()"></span>
+      </div>
+    </md-tab>
+  </md-tabs>
+</div>
+
+  </body>
+</html>
