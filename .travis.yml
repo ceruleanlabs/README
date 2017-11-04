@@ -1,0 +1,15 @@
+language: node_js
+cache:
+  yarn: true
+notifications:
+  slack:
+    rooms:
+      - $SLACK_TOKEN
+    on_pull_requests: false
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  local_dir: build
+  on:
+    branch: master
