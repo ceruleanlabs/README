@@ -11,13 +11,15 @@ class Markdown extends React.Component {
   render() {
     return (
       <div>
-        # {this.state.projectName}
-        <br/><br/>
-        {this.state.projectDescription}
-        <br/><br/>
-        ## {this.state.purposeHeader}
-        <br/><br/>
-        {this.state.purposeDescription}
+        <pre>
+          # {this.state.projectName}
+          <br/><br/>
+          {this.state.projectDescription}
+          <br/><br/>
+          ## {this.state.purposeHeader}
+          <br/><br/>
+          {this.state.purposeDescription}
+        </pre>
       </div>
     );
   }
