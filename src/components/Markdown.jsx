@@ -1,12 +1,15 @@
 import React from 'react';
 
 class Markdown extends React.Component {
-  state = {
-    projectName: 'README',
-    projectDescription: 'A React site to help generate repo READMEs.',
-    purposeHeader: 'What is this?',
-    purposeDescription: 'Longer repo purpose here.'
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      projectName: 'README',
+      projectDescription: 'A React site to help generate repo READMEs.',
+      purposeHeader: 'What is this?',
+      purposeDescription: 'Longer repo purpose here.'
+    };
+  }
 
   render() {
     return (
