@@ -1,9 +1,9 @@
 import React from 'react';
 import { withStyles } from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
-import FullWidthTabs from './components/tabs';
-import TextFields from './components/fields';
-import Header from './components/header';
+import FullWidthTabs from './components/Tabs';
+import TextFields from './components/Fields';
+import Header from './components/Header';
 
 const styles = theme => ({
   root: {

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import SwipeableViews from 'react-swipeable-views';
 import Tabs, { Tab } from 'material-ui/Tabs';
-import Markdown from './markdown';
-import Preview from './preview';
+import Markdown from './Markdown';
+import Preview from './Preview';
 
 function TabContainer({ children, dir }) {
   return (
