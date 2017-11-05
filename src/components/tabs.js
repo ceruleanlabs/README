@@ -42,18 +42,16 @@ class FullWidthTabs extends React.Component {
 
     return (
       <div className={classes.root} style={{ width: 500 }}>
-        <AppBar position="static" color="default">
-          <Tabs
-            value={this.state.value}
-            onChange={this.handleChange}
-            indicatorColor="primary"
-            textColor="primary"
-            fullWidth
-          >
-            <Tab label="PREVIEW" />
-            <Tab label="MARKDOWN" />
-          </Tabs>
-        </AppBar>
+        <Tabs
+          value={this.state.value}
+          onChange={this.handleChange}
+          indicatorColor="primary"
+          textColor="primary"
+          fullWidth
+        >
+          <Tab label="PREVIEW" />
+          <Tab label="MARKDOWN" />
+        </Tabs>
         <SwipeableViews
           axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
           index={this.state.value}
