@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from 'react-dom';
 import { withStyles } from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
 import FullWidthTabs from './components/tabs';
@@ -8,7 +7,6 @@ import Header from './components/header';
 
 const styles = theme => ({
   root: {
-    display: 'flex',
     marginRight: 100,
     marginLeft: 100
   }
