@@ -1,8 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import { render } from 'react-dom';
+import FullWidthTabs from './tabs';
+import TextFields from './fields';
+import Header from './header';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+function App() {
+  return (
+    <div>
+      <Header />
+      <div>
+        <TextFields />
+      </div>
+      <div>
+        <FullWidthTabs />
+      </div>
+    </div>
+  );
+}
+
+render(<App />, document.querySelector('#root'));
