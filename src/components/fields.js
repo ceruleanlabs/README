@@ -10,8 +10,7 @@ const styles = theme => ({
   },
   textField: {
     marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit,
-    width: 200
+    marginRight: theme.spacing.unit
   }
 });
 
@@ -33,7 +32,7 @@ class TextFields extends React.Component {
     const { classes } = this.props;
 
     return (
-      <form className={classes.container} noValidate autoComplete="off">
+      <form fullWidth className={classes.container} noValidate autoComplete="off">
         <TextField
           id="project-name"
           label="Project Name"

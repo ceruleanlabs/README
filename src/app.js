@@ -22,10 +22,10 @@ function App(props) {
         <Grid item xs={12}>
           <Header />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={5}>
           <TextFields />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={7}>
           <FullWidthTabs />
         </Grid>
       </Grid>
