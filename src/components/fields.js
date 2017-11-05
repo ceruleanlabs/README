@@ -18,7 +18,7 @@ const styles = theme => ({
 class TextFields extends React.Component {
   state = {
     projectName: 'README',
-    shortDescription: 'A React site to help generate repo READMEs.',
+    projectDescription: 'A React site to help generate repo READMEs.',
     purposeHeader: 'What is this?',
     purposeDescription: 'Longer repo purpose here'
   };
@@ -47,7 +47,7 @@ class TextFields extends React.Component {
           label="Short Description"
           placeholder="Short Description"
           className={classes.textField}
-          value={this.state.purposeDescription}
+          value={this.state.projectDescription}
           onChange={this.handleChange('projectDescription')}
           margin="normal"
         />
