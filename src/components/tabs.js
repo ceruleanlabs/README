@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import SwipeableViews from 'react-swipeable-views';
-import AppBar from 'material-ui/AppBar';
 import Tabs, { Tab } from 'material-ui/Tabs';
+import Markdown from './markdown';
+import Preview from './preview';
 
 function TabContainer({ children, dir }) {
   return (
@@ -57,8 +58,8 @@ class FullWidthTabs extends React.Component {
           index={this.state.value}
           onChangeIndex={this.handleChangeIndex}
         >
-          <TabContainer dir={theme.direction}><h1>README</h1></TabContainer>
-          <TabContainer dir={theme.direction}><p># README</p></TabContainer>
+          <TabContainer dir={theme.direction}><Preview /></TabContainer>
+          <TabContainer dir={theme.direction}><Markdown /></TabContainer>
         </SwipeableViews>
       </div>
     );

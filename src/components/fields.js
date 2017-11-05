@@ -20,7 +20,7 @@ class TextFields extends React.Component {
     projectName: 'README',
     projectDescription: 'A React site to help generate repo READMEs.',
     purposeHeader: 'What is this?',
-    purposeDescription: 'Longer repo purpose here'
+    purposeDescription: 'Longer repo purpose here.'
   };
 
   handleChange = name => event => {
