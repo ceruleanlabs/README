@@ -5,7 +5,7 @@ import FullWidthTabs from './components/Tabs';
 import TextFields from './components/Fields';
 import Header from './components/Header';
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     marginRight: 100,
     marginLeft: 100

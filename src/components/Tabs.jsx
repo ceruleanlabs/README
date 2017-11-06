@@ -19,7 +19,7 @@ TabContainer.propTypes = {
   dir: PropTypes.string.isRequired
 };
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     backgroundColor: theme.palette.background.paper
   }
@@ -34,7 +34,7 @@ class FullWidthTabs extends React.Component {
     this.setState({ value });
   };
 
-  handleChangeIndex = index => {
+  handleChangeIndex = (index) => {
     this.setState({ value: index });
   };
 
