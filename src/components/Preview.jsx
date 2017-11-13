@@ -13,7 +13,7 @@ class Preview extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="markdown-body">
         <h1>{this.state.projectName}</h1>
         <p>{this.state.projectDescription}</p>
         <h2>{this.state.purposeHeader}</h2>
