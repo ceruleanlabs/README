@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "github-markdown-css": "^2.9.0",
     "jss": "latest",
     "jss-preset-default": "latest",
     "material-ui": "next",
