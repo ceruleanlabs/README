@@ -14,6 +14,10 @@ More to follow -- ideally, this project helps generate its own README.
 
     $ yarn start
 
+## Test
+
+    $ yarn test
+
 ## Deploy
 
     $ yarn build
