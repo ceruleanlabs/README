@@ -17,12 +17,11 @@ const styles = (theme) => ({
 class TextFields extends React.Component {
   constructor(props) {
     super(props);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange = (name) => (event) => {
-    this.setState({
-      [name]: event.target.value
-    });
+    this.props.onChange(name, event.target.value);
   };
 
   render() {

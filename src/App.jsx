@@ -15,12 +15,17 @@ const styles = (theme) => ({
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.handleChange = this.handleChange.bind(this);
     this.state = {
       projectName: 'README',
       projectDescription: 'A React site to help generate repo READMEs.',
       purposeHeader: 'What is this?',
       purposeDescription: 'Longer repo purpose here.'
     };
+  }
+
+  handleChange(name, value) {
+    this.setState({[name]: value});
   }
 
   render() {
@@ -42,7 +47,7 @@ class App extends React.Component {
               projectDescription={projectDescription}
               purposeHeader={purposeHeader}
               purposeDescription={purposeDescription}
-            />
+              onChange={this.handleChange} />
           </Grid>
           <Grid item xs={7}>
             <FullWidthTabs
@@ -50,7 +55,7 @@ class App extends React.Component {
               projectDescription={projectDescription}
               purposeHeader={purposeHeader}
               purposeDescription={purposeDescription}
-            />
+              onChange={this.handleChange} />
           </Grid>
         </Grid>
       </div>
