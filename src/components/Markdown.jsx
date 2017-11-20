@@ -3,25 +3,19 @@ import React from 'react';
 class Markdown extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      projectName: 'README',
-      projectDescription: 'A React site to help generate repo READMEs.',
-      purposeHeader: 'What is this?',
-      purposeDescription: 'Longer repo purpose here.'
-    };
   }
 
   render() {
     return (
       <div>
         <pre>
-          # {this.state.projectName}
+          # {this.props.projectName}
           <br/><br/>
-          {this.state.projectDescription}
+          {this.props.projectDescription}
           <br/><br/>
-          ## {this.state.purposeHeader}
+          ## {this.props.purposeHeader}
           <br/><br/>
-          {this.state.purposeDescription}
+          {this.props.purposeDescription}
         </pre>
       </div>
     );

@@ -17,12 +17,6 @@ const styles = (theme) => ({
 class TextFields extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      projectName: 'README',
-      projectDescription: 'A React site to help generate repo READMEs.',
-      purposeHeader: 'What is this?',
-      purposeDescription: 'Longer repo purpose here.'
-    };
   }
 
   handleChange = (name) => (event) => {
@@ -40,7 +34,7 @@ class TextFields extends React.Component {
           id="project-name"
           label="Project Name"
           className={classes.textField}
-          value={this.state.projectName}
+          value={this.props.projectName}
           onChange={this.handleChange('projectName')}
           margin="normal"
         />
@@ -49,7 +43,7 @@ class TextFields extends React.Component {
           label="Short Description"
           placeholder="Short Description"
           className={classes.textField}
-          value={this.state.projectDescription}
+          value={this.props.projectDescription}
           onChange={this.handleChange('projectDescription')}
           margin="normal"
         />
@@ -57,7 +51,7 @@ class TextFields extends React.Component {
           id="purpose-header"
           label="Purpose Header"
           className={classes.textField}
-          value={this.state.purposeHeader}
+          value={this.props.purposeHeader}
           onChange={this.handleChange('purposeHeader')}
           margin="normal"
         />
@@ -65,7 +59,7 @@ class TextFields extends React.Component {
           id="purpose-description"
           label="Purpose Description"
           className={classes.textField}
-          value={this.state.purposeDescription}
+          value={this.props.purposeDescription}
           multiline
           onChange={this.handleChange('purposeDescription')}
           margin="normal"
