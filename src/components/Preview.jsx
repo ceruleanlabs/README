@@ -6,6 +6,10 @@ class Preview extends React.Component {
     super(props);
   }
 
+  /**
+   * createMarkup() returns an html string
+   * to use the dangerouslySetInnerHTML attribute
+   */
   createMarkup() {
     return {__html: marked(
       `
