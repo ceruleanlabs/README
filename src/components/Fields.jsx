@@ -40,7 +40,6 @@ class TextFields extends React.Component {
         <TextField
           id="short-description"
           label="Short Description"
-          placeholder="Short Description"
           className={classes.textField}
           value={this.props.projectDescription}
           onChange={this.handleChange('projectDescription')}
@@ -59,8 +58,8 @@ class TextFields extends React.Component {
           label="Purpose Description"
           className={classes.textField}
           value={this.props.purposeDescription}
-          multiline
           onChange={this.handleChange('purposeDescription')}
+          multiline
           margin="normal"
         />
       </form>

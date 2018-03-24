@@ -47,7 +47,8 @@ class App extends React.Component {
               projectDescription={projectDescription}
               purposeHeader={purposeHeader}
               purposeDescription={purposeDescription}
-              onChange={this.handleChange} />
+              onChange={this.handleChange}
+            />
           </Grid>
           <Grid item xs={7}>
             <FullWidthTabs
@@ -55,7 +56,7 @@ class App extends React.Component {
               projectDescription={projectDescription}
               purposeHeader={purposeHeader}
               purposeDescription={purposeDescription}
-              onChange={this.handleChange} />
+            />
           </Grid>
         </Grid>
       </div>
