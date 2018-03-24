@@ -5,6 +5,7 @@
   "dependencies": {
     "jss": "latest",
     "jss-preset-default": "latest",
+    "marked": "^0.3.18",
     "material-ui": "next",
     "react": "latest",
     "react-dom": "latest",

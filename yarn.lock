@@ -4323,6 +4323,10 @@ map-obj@^1.0.0, map-obj@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-1.0.1.tgz#d933ceb9205d82bdcf4886f6742bdc2b4dea146d"
 
+marked@^0.3.18:
+  version "0.3.18"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.18.tgz#3ef058cd926101849b92a7a7c15db18c7fc76b2f"
+
 material-ui@next:
   version "1.0.0-beta.19"
   resolved "https://registry.yarnpkg.com/material-ui/-/material-ui-1.0.0-beta.19.tgz#fe2cf131f7ffe8f591ed063d1fa5b8360f272164"
