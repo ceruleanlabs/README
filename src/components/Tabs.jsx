@@ -40,6 +40,10 @@ class FullWidthTabs extends React.Component {
 
   render() {
     const { classes, theme } = this.props;
+    const projectName = this.props.projectName;
+    const projectDescription = this.props.projectDescription;
+    const purposeHeader = this.props.purposeHeader;
+    const purposeDescription = this.props.purposeDescription;
 
     return (
       <div className={classes.root} style={{ width: 500 }}>
@@ -59,10 +63,20 @@ class FullWidthTabs extends React.Component {
           onChangeIndex={this.handleChangeIndex}
         >
           <TabContainer dir={theme.direction}>
-            <Preview />
+            <Preview
+              projectName={projectName}
+              projectDescription={projectDescription}
+              purposeHeader={purposeHeader}
+              purposeDescription={purposeDescription}
+            />
           </TabContainer>
           <TabContainer dir={theme.direction}>
-            <Markdown />
+            <Markdown
+              projectName={projectName}
+              projectDescription={projectDescription}
+              purposeHeader={purposeHeader}
+              purposeDescription={purposeDescription}
+            />
           </TabContainer>
         </SwipeableViews>
       </div>

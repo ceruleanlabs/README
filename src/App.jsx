@@ -12,23 +12,56 @@ const styles = (theme) => ({
   }
 });
 
-function App(props) {
-  const { classes } = props;
-  return (
-    <div className={classes.root}>
-      <Grid container spacing={24}>
-        <Grid item xs={12}>
-          <Header />
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+    this.state = {
+      projectName: 'README',
+      projectDescription: 'A React site to help generate repo READMEs.',
+      purposeHeader: 'What is this?',
+      purposeDescription: 'Longer repo purpose here.'
+    };
+  }
+
+  handleChange(name, value) {
+    this.setState({[name]: value});
+  }
+
+  render() {
+    const { classes } = this.props;
+    const projectName = this.state.projectName;
+    const projectDescription = this.state.projectDescription;
+    const purposeHeader = this.state.purposeHeader;
+    const purposeDescription = this.state.purposeDescription;
+
+    return (
+      <div className={classes.root}>
+        <Grid container spacing={24}>
+          <Grid item xs={12}>
+            <Header />
+          </Grid>
+          <Grid item xs={5}>
+            <TextFields
+              projectName={projectName}
+              projectDescription={projectDescription}
+              purposeHeader={purposeHeader}
+              purposeDescription={purposeDescription}
+              onChange={this.handleChange}
+            />
+          </Grid>
+          <Grid item xs={7}>
+            <FullWidthTabs
+              projectName={projectName}
+              projectDescription={projectDescription}
+              purposeHeader={purposeHeader}
+              purposeDescription={purposeDescription}
+            />
+          </Grid>
         </Grid>
-        <Grid item xs={5}>
-          <TextFields />
-        </Grid>
-        <Grid item xs={7}>
-          <FullWidthTabs />
-        </Grid>
-      </Grid>
-    </div>
-  );
+      </div>
+    );
+  }
 }
 
 export default withStyles(styles)(App);

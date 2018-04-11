@@ -1,25 +1,27 @@
 import React from 'react';
+import marked from 'marked';
 
 class Preview extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      projectName: 'README',
-      projectDescription: 'A React site to help generate repo READMEs.',
-      purposeHeader: 'What is this?',
-      purposeDescription: 'Longer repo purpose here.'
-    };
+  }
+
+  /**
+   * createMarkup() returns an html string
+   * to use the dangerouslySetInnerHTML attribute
+   */
+  createMarkup() {
+    return {__html: marked(
+      `
+# ${this.props.projectName}
+${this.props.projectDescription}
+## ${this.props.purposeHeader}
+${this.props.purposeDescription}`
+    )};
   }
 
   render() {
-    return (
-      <div className="markdown-body">
-        <h1>{this.state.projectName}</h1>
-        <p>{this.state.projectDescription}</p>
-        <h2>{this.state.purposeHeader}</h2>
-        <p>{this.state.purposeDescription}</p>
-      </div>
-    );
+    return <div dangerouslySetInnerHTML={this.createMarkup()}/>;
   }
 }
 
